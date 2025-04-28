@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundColorChange 5s infinite; /* Apply animation */
+  }
+
+  @keyframes backgroundColorChange {
+    0% {
+      background: #74ebd5;
+    }
+    50% {
+      background: #acb6e5;
+    }
+    100% {
+      background: #74ebd5;
+    }
+  }
+  
+  .quiz-container {
+    background: #fff5;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  .typewriter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+  }
+  .typewriter h1 {
+    font-size: 1.5rem;
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+  }
+
+  @keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+  }
+
+  .typewriter-animation {
+    animation: typing 800ms steps(24) forwards, blink 1s step-end infinite;
+  }
+  
+  #timer {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+  
+  .answer-buttons {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .answer-buttons li {
+    margin: 10px 0;
+  }
+  
+  .answer-buttons button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #74ebd5;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .answer-buttons button:hover {
+    background: #56c6e6;
+  }
+
+  #start-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #acb6e5;
+    color: #333;
+    border: 1px solid;
+    border-color: slateblue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  #start-btn:hover {
+    background: #8ea7d3;
+  }
+  
+  #next-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #acb6e5;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+  }
+  
+  #next-btn:hover {
+    background: #8ea7d3;
+  }
+  
+  @media (max-width: 600px) {
+    .quiz-container {
+      padding: 20px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+  }
+  
